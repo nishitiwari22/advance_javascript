@@ -1,0 +1,229 @@
+<!-- //Arrays and Loops -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops Coders Gyan</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+const languages = ['javascript', 'python', 'c'];
+//Length
+console.log(language.length);
+languages.push('dart');
+languages.unshift('java');
+languages.pop()
+languages.shift();
+console.log(language);
+
+
+const actors =[
+    {
+    name: 'Actor 1',
+    payment: 100
+    },
+    {
+    name: 'Actor 1',
+    payment: 200
+    },
+    {
+    name: 'Actor 1',
+    payment: 150
+    },
+];
+
+//For Loop
+
+for (let i=0; i<actors.length; i++){
+    actors[i].payment=actors[i].payment-10;
+}
+console.log(actors);
+
+
+for (let i=0; i<actors.length; i++){
+    actors[i].payment=actors[i].payment -10;
+}
+
+//For Each
+
+actors.forEach((actor)=> {
+    actor.payment=actor.payment-10;
+});
+
+for (let actor of actors){
+    actor.payment=actor.payment-10;
+    //console.log(actor);
+}
+
+console.log(actors);
+
+
+
+
+
+
+
+const students=[
+    {
+        name: "Student 1",
+        marks: 45
+    },
+    {
+        name:"Student 2",
+        marks:60
+    },
+    {
+        name:"Student 3",
+        marks:35
+    }
+];
+
+/*
+const stdFailed = students.filter((student)=> {
+    //return student.marks < 45; //or sirf yeh likehneg toh bhi wahi output aayegga
+    if (student.marks <45){
+        return true;
+    }//else{ //ye nhi bhi likhenge toh bhi wahi output milega
+    
+       return false;  
+});
+
+console.log(students);
+
+const stdFailed= students.filter((students)=>student.marks<45);
+
+console.log(stdFailed);
+
+*/
+
+
+
+//Map
+
+const dumbUsers = [
+    {
+        fname: 'John',
+        lname: 'Doe'
+    },
+    {
+        fname: 'Jane',
+        lname: 'Doe'
+    }
+];
+
+
+const finalUsers =dumbUsers.map((user)=> {
+    return {
+        fullname: `${dumbUsers.fname} ${dumbUsers.lname}`
+    };
+});
+
+console.log (finalUsers);
+
+
+//Reduce
+
+const movies = [
+    {
+        name: "Intersteller",
+        budget: 100
+    },
+    {
+        name: "Social",
+        budget: 150
+    },
+    {
+        name: "Matrix",
+        budget: 300
+    },
+
+]
+
+//let total = 0
+//movies.forEach((movie)=>){
+   // total +=movie.budget;
+//});
+
+
+const total =movies.reduce((acc, movie) => {
+    acc = acc+ movie.budget;
+    return acc;
+}, 0);
+
+
+console.log(total);
+
+//Indexof
+
+
+const admins = [2,1,5];
+const user ={
+    name: 'XYZ',
+    id: 6
+}
+
+console.log(admins.indexOf(user.id));
+
+
+// const admins = [2,1,5];
+// const user ={
+//     name: 'XYZ',
+//     id: 5
+// }
+
+
+// const.isAdmin = admins.indexof(user.id) > -1;
+// console.log(isAdmins.);
+
+//includes
+console.log(admins.include(user.id))
+
+
+//find
+
+const users =[
+    {
+        name: 'xyz',
+        id: 1
+    },
+    {
+        name: 'abc',
+        id: 2
+    },
+    {
+        name: 'pqz',
+        id: 3
+    }
+];
+
+const myUser =users.find((user)=> {
+    // if (user.id==3){
+    //     return true;
+    // }
+    // return false;
+
+    return user.id===3; //itna bada likhne se accha chota likho
+    return user.name === 'pqr'; //ek bhi value return karwa sakte h
+});
+
+console.log(myUser)
+
+
+//sort 
+const names =['John', 'Jane', 'Shyam', 'Ram', 'Sita', 'Radha'];
+names.sort();
+console.log(names);
+
+//splice
+//const.names =  ['John', 'Jane', 'Shyam', 'Ram', 'Sita', 'Radha'];
+//names.splice (2,2);
+//console.log(names);
+
+</script>

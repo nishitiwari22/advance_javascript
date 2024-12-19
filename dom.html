@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Hello World
+    </title>
+    <h1 class="hello"> Hello World</h1>
+    <ul id = "listitems">
+      <!-- <li>List item 1</li>  
+      <li>List item 2</li>  
+      <li>List item 3</li>   -->
+
+    </ul>
+<h1>Counter: <span id="counter">0</span></h1>
+
+    <button id="increment">increment</button>
+    <button id="decrement">decrement</button>
+</head>
+<body>
+    <script>
+        console.log(document)
+
+        const heading = document.querySelector('.hello')
+
+        heading.innerText = "Hello Nishi"
+
+        console.log(heading)
+        
+        const allListItems = document.querySelectorAll('ul li')
+
+        console.log(allListItems.length)
+
+        for(let i=0; i<allListItems.length;i++) {
+            const listItem =allListItems[i]
+            listItem.innerHTML = "NISHHHHHHHHHHI"
+        }
+
+
+// const incrementBtn = document.querySelector('#increment')
+// const decrementBtn = document.querySelector('#decrement')
+// const counterEl = document.getElementById('counter')
+
+let ourCounter = 0
+
+function incrementCounter() {
+    ourCounter++
+    counterEl.innerText = ourCounter
+}
+
+
+function decrementCounter() {
+    counter--
+    counterEl.innerText = ourCounter
+}
+
+incrementBtn.addEventListener('click', incrementCounter)
+decrementBtn.addEventListener('click', decrementCounter)
+
+const ul = document.querySelector('ul')
+const li = ul.querySelector('li')
+
+
+const incrementBtn = document.querySelector('#increment')
+const decrementBtn = document.querySelector('#decrement')
+const counterEl = document.getElementById('counter')
+
+const ulElement = document.getElementById('list-items')
+    
+    let counter = 0
+
+    function incrementCounter() {
+        counter++
+        counterEl.innerText = counter
+
+        //create an element
+        const li = document.createElement('li')
+const textNode = document.createTextNode('Sentence' + counter)
+li.appendChild(textNode)
+        //append that element
+        ulElement.appendChild(li)
+    }
+
+    function decrementChild(li)
+    
+    </script>
+
+
+    <style> 
+    ul li {
+background-color: aqua;
+    }
+    </style>
+</body>
+</html>
+
+
+
+
+<!-- id in html (so # in js)
+class in html (so . in js)
+
+
+query selctor only returns the first matching character but CSS targets every sinfgle element
+
+query selctor returns single html node
+
+allListItems returns an array of html nodes
+
+get element by id creates a hash map of all te ids on page with their coreepsonding refrences.  -->\
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+Function Parameter -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script> 
+ let myAge = 19
+ let sum = 200
+ let totalCount = 5
+
+ function addToMyAge(incrementby, multiplyby, divideby ) {
+     myAge = ((myAge + 5) * multiplyby) /divideby
+
+ }   
+
+ addToMyAge(5, 2, 20, 1)
+
+ console.log(myAge)
+    </script>
+</body>
+</html>
+ -->
